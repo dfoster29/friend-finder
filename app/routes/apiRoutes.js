@@ -4,26 +4,44 @@
 //    * A POST routes `/api/friends`. This will be used to handle incoming survey results. This route will also be used to handle the compatibility logic.
 var path = require("path");
 
-var friendDataArr = require("../data/friends");
+var friendData = require("../data/friends");
 
 module.exports = function(app) {
   app.get("/api/friends", function(req, res) {
-    res.json(friendDataArr);
+    res.json(friendData);
   });
 
   app.post("/api/friends", function(req, res) {
-    var matchName = "";
-    var matchImage = "";
-    var scoreDif = "";
+    var friendName = "";
+    var friendImage = "";
+    var differenceTotal = "99999";
+    var userAnswers = req.body;
+    var userScores = userAnswers.scores;
 
-    var user = req.body;
+		for (var i = 0; i < friendData.length; i++) {
 
-    var userScores = user.scores;
+			var difference = 0;
+			for (var x = 0; x < userScores.length; x++) {
+				difference += Math.abs(friendData[i].scores[x] - userScores[x]);
+			}
+
+			if (difference < differenceTotal) {
+
+				differenceTotal = difference;
+				friendName = friendData[i].name;
+        friendImage = friendData[i].photo;
+        
+        console.log("friend match name: " + friendName);
+
+			}
+		}
+
+    friendData.push(userAnswers);
+
+    res.json({status: 'OK', friendName: friendName, friendImage: friendImage});
   });
+
+
+
 };
 
-
-// within the app.post 
-// set variables to hold the friend match, friend match picture, and score difference
-// must loop over the users scores and determine the difference at each location, add the difference up, the two people with the smallest total difference are then matched as friends
-// the scores must be compared with each user 

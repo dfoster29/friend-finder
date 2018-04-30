@@ -25,19 +25,18 @@
       <div class="card-header bg-primary">
         <h2 class="text-white">User Info:</h2>
       </div>
-      <div class="p-4">
+      <div class="bg-secondary p-4 m-3">
         <form>
           <div class="form-group">
-            <label for="userName">Name</label>
-            <input type="text" class="form-control" id="user-name" placeholder="enter name...">
-            <small id="nameHelp" class="form-text text-muted">Please enter your name</small>
+            <label for="userName"><h3>Name</h3></label>
+            <input type="text" class="form-control form-control-lg" id="user-name" placeholder="enter name...">
+            <small id="nameHelp" class="form-text">Please enter your name</small>
           </div>
           <div class="form-group">
-            <label for="userPhoto">Photo</label>
-            <input type="text" class="form-control" id="user-photo" placeholder="enter photo link...">
-            <small id="nameHelp" class="form-text text-muted">Please enter a link to a photo of yourself</small>
+            <label for="userPhoto"><h3>Photo</h3></label>
+            <input type="text" class="form-control form-control-lg" id="user-photo" placeholder="enter photo link...">
+            <small id="nameHelp" class="form-text">Please enter a link to a photo of yourself</small>
           </div>
-          <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
         </form>
       </div>
 
@@ -52,151 +51,139 @@
         <div class="mb-4 bg-dark p-4">
           <h3 class="text-white">1.</h3>
           <h3 class="mb-4 text-center text-white" id="questions">I am extroverted and enthusiastic.</h3>
-          <div class="row justify-content-md-center" id="question-one">
-            <button class="btn btn-lg btn-light col-md-2 m-2" value="1">totally disagree</button>
-            <button class="btn btn-lg btn-light col-md-2 m-2" value="2">slightly disagree</button>
-            <button class="btn btn-lg btn-light col-md-2 m-2" value="3">neither</button>
-            <button class="btn btn-lg btn-light col-md-2 m-2" value="4">agree</button>
-            <button class="btn btn-lg btn-light col-md-2 m-2" value="5">totally agree</button>
-          </div>
+          <select class="form-control form-control-lg" id="question-1">
+            <option disabled selected>Choose...</option>
+            <option value="1">completely agree</option>
+            <option value="2">partially agree</option>
+            <option value="3">neither agree or disagree</option>
+            <option value="4">partially disagree</option>
+            <option value="5">completely disagree</option>
+          </select>
         </div>
 
         <div class="mb-4 bg-secondary p-4">
           <h3>2.</h3>
           <h3 class="mb-4 text-center" id="questions">I am critcal and quarrelsome.</h3>
-          <div class="row justify-content-md-center" id="question-two">
-            <button class="btn btn-lg btn-light col-md-2 m-2" value="1">totally disagree</button>
-            <button class="btn btn-lg btn-light col-md-2 m-2" value="2">slightly disagree</button>
-            <button class="btn btn-lg btn-light col-md-2 m-2" value="3">neither</button>
-            <button class="btn btn-lg btn-light col-md-2 m-2" value="4">agree</button>
-            <button class="btn btn-lg btn-light col-md-2 m-2" value="5">totally agree</button>
-          </div>
+          <select class="form-control form-control-lg" id="question-2">
+            <option disabled selected>Choose...</option>
+            <option value="1">completely agree</option>
+            <option value="2">partially agree</option>
+            <option value="3">neither agree or disagree</option>
+            <option value="4">partially disagree</option>
+            <option value="5">completely disagree</option>
+          </select>
         </div>
 
         <div class="mb-4 bg-dark p-4">
           <h3 class="text-white">3.</h3>
           <h3 class="mb-4 text-center text-white" id="questions">I am dependable and self disciplined.</h3>
-          <div class="row justify-content-md-center" id="question-three">
-            <button class="btn btn-lg btn-light col-md-2 m-2" value="1">totally disagree</button>
-            <button class="btn btn-lg btn-light col-md-2 m-2" value="2">slightly disagree</button>
-            <button class="btn btn-lg btn-light col-md-2 m-2" value="3">neither</button>
-            <button class="btn btn-lg btn-light col-md-2 m-2" value="4">agree</button>
-            <button class="btn btn-lg btn-light col-md-2 m-2" value="5">totally agree</button>
-          </div>
+          <select class="form-control form-control-lg" id="question-3">
+            <option disabled selected>Choose...</option>
+            <option value="1">completely agree</option>
+            <option value="2">partially agree</option>
+            <option value="3">neither agree or disagree</option>
+            <option value="4">partially disagree</option>
+            <option value="5">completely disagree</option>
+          </select>
         </div>
 
         <div class="mb-4 bg-secondary p-4">
           <h3>4.</h3>
           <h3 class="mb-4 text-center" id="questions">I am anxious and easily upset.</h3>
-          <div class="row justify-content-md-center" id="question-four">
-            <button class="btn btn-lg btn-light col-md-2 m-2" value="1">totally disagree</button>
-            <button class="btn btn-lg btn-light col-md-2 m-2" value="2">disagree</button>
-            <button class="btn btn-lg btn-light col-md-2 m-2" value="3">neither</button>
-            <button class="btn btn-lg btn-light col-md-2 m-2" value="4">agree</button>
-            <button class="btn btn-lg btn-light col-md-2 m-2" value="5">totally agree</button>
-          </div>
+          <select class="form-control form-control-lg" id="question-4">
+            <option disabled selected>Choose...</option>
+            <option value="1">completely agree</option>
+            <option value="2">partially agree</option>
+            <option value="3">neither agree or disagree</option>
+            <option value="4">partially disagree</option>
+            <option value="5">completely disagree</option>
+          </select>
         </div>
 
         <div class="mb-4 bg-dark p-4">
           <h3 class="text-white">5.</h3>
           <h3 class="mb-4 text-center text-white" id="questions">I am open to new experiences.</h3>
-          <div class="row justify-content-md-center" id="question-five">
-            <button class="btn btn-lg btn-light col-md-2 m-2" value="1">totally disagree</button>
-            <button class="btn btn-lg btn-light col-md-2 m-2" value="2">slightly disagree</button>
-            <button class="btn btn-lg btn-light col-md-2 m-2" value="3">neither</button>
-            <button class="btn btn-lg btn-light col-md-2 m-2" value="4">agree</button>
-            <button class="btn btn-lg btn-light col-md-2 m-2" value="5">totally agree</button>
-          </div>
+          <select class="form-control form-control-lg" id="question-5">
+            <option disabled selected>Choose...</option>
+            <option value="1">completely agree</option>
+            <option value="2">partially agree</option>
+            <option value="3">neither agree or disagree</option>
+            <option value="4">partially disagree</option>
+            <option value="5">completely disagree</option>
+          </select>
         </div>
 
         <div class="mb-4 bg-secondary p-4">
           <h3>6.</h3>
           <h3 class="mb-4 text-center" id="questions">I am reserved and quiet.</h3>
-          <div class="row justify-content-md-center" id="question-six">
-            <button class="btn btn-lg btn-light col-md-2 m-2" value="1">totally disagree</button>
-            <button class="btn btn-lg btn-light col-md-2 m-2" value="2">slightly disagree</button>
-            <button class="btn btn-lg btn-light col-md-2 m-2" value="3">neither</button>
-            <button class="btn btn-lg btn-light col-md-2 m-2" value="4">agree</button>
-            <button class="btn btn-lg btn-light col-md-2 m-2" value="5">totally agree</button>
-          </div>
+          <select class="form-control form-control-lg" id="question-6">
+            <option disabled selected>Choose...</option>
+            <option value="1">completely agree</option>
+            <option value="2">partially agree</option>
+            <option value="3">neither agree or disagree</option>
+            <option value="4">partially disagree</option>
+            <option value="5">completely disagree</option>
+          </select>
         </div>
 
         <div class="mb-4 bg-dark p-4">
           <h3 class="text-white">7.</h3>
           <h3 class="mb-4 text-center text-white" id="questions">I am sympathetic and caring.</h3>
-          <div class="row justify-content-md-center" id="question-seven">
-            <button class="btn btn-lg btn-light col-md-2 m-2" value="1">totally disagree</button>
-            <button class="btn btn-lg btn-light col-md-2 m-2" value="2">slightly disagree</button>
-            <button class="btn btn-lg btn-light col-md-2 m-2" value="3">neither</button>
-            <button class="btn btn-lg btn-light col-md-2 m-2" value="4">agree</button>
-            <button class="btn btn-lg btn-light col-md-2 m-2" value="5">totally agree</button>
-          </div>
+          <select class="form-control form-control-lg" id="question-7">
+            <option disabled selected>Choose...</option>
+            <option value="1">completely agree</option>
+            <option value="2">partially agree</option>
+            <option value="3">neither agree or disagree</option>
+            <option value="4">partially disagree</option>
+            <option value="5">completely disagree</option>
+          </select>
         </div>
 
         <div class="mb-4 bg-secondary p-4">
           <h3>8.</h3>
           <h3 class="mb-4 text-center" id="questions">I am calm and emotionally stable.</h3>
-          <div class="row justify-content-md-center" id="question-eight">
-            <button class="btn btn-lg btn-light col-md-2 m-2" value="1">totally disagree</button>
-            <button class="btn btn-lg btn-light col-md-2 m-2" value="2">slightly disagree</button>
-            <button class="btn btn-lg btn-light col-md-2 m-2" value="3">neither</button>
-            <button class="btn btn-lg btn-light col-md-2 m-2" value="4">agree</button>
-            <button class="btn btn-lg btn-light col-md-2 m-2" value="5">totally agree</button>
-          </div>
+          <select class="form-control form-control-lg" id="question-8">
+            <option disabled selected>Choose...</option>
+            <option value="1">completely agree</option>
+            <option value="2">partially agree</option>
+            <option value="3">neither agree or disagree</option>
+            <option value="4">partially disagree</option>
+            <option value="5">completely disagree</option>
+          </select>
         </div>
 
         <div class="mb-4 bg-dark p-4">
           <h3 class="text-white">9.</h3>
           <h3 class="mb-4 text-center text-white" id="questions">I am disorganized and careless.</h3>
-          <div class="row justify-content-md-center" id="question-nine">
-            <button class="btn btn-lg btn-light col-md-2 m-2" value="1">totally disagree</button>
-            <button class="btn btn-lg btn-light col-md-2 m-2" value="2">slightly disagree</button>
-            <button class="btn btn-lg btn-light col-md-2 m-2" value="3">neither</button>
-            <button class="btn btn-lg btn-light col-md-2 m-2" value="4">agree</button>
-            <button class="btn btn-lg btn-light col-md-2 m-2" value="5">totally agree</button>
-          </div>
+          <select class="form-control form-control-lg" id="question-9">
+            <option disabled selected>Choose...</option>
+            <option value="1">completely agree</option>
+            <option value="2">partially agree</option>
+            <option value="3">neither agree or disagree</option>
+            <option value="4">partially disagree</option>
+            <option value="5">completely disagree</option>
+          </select>
         </div>
 
         <div class="mb-4 bg-secondary p-4">
           <h3>10.</h3>
-          <h3 class="mb-4 text-center" id="questions">I am extroverted and enthusiastic.</h3>
-          <div class="row justify-content-md-center" id="question-ten">
-            <button class="btn btn-lg btn-light col-md-2 m-2" value="1">totally disagree</button>
-            <button class="btn btn-lg btn-light col-md-2 m-2" value="2">slightly disagree</button>
-            <button class="btn btn-lg btn-light col-md-2 m-2" value="3">neither</button>
-            <button class="btn btn-lg btn-light col-md-2 m-2" value="4">agree</button>
-            <button class="btn btn-lg btn-light col-md-2 m-2" value="5">totally agree</button>
-          </div>
+          <h3 class="mb-4 text-center" id="questions">I see myself as conventional, uncreative.</h3>
+          <select class="form-control form-control-lg" id="question-10">
+            <option disabled selected>Choose...</option>
+            <option value="1">completely agree</option>
+            <option value="2">partially agree</option>
+            <option value="3">neither agree or disagree</option>
+            <option value="4">partially disagree</option>
+            <option value="5">completely disagree</option>
+          </select>
         </div>
 
-        <div class="row justify-content-md-center">
-          <button id="submit" type="button" class="btn btn-lg btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+        <div class="row justify-content-center">
+          <button id="submit" type="button" class="btn btn-lg btn-primary">
             submit survey
           </button>
         </div>
 
-      </div>
-    </div>
-  </div>
-
-
-  <!-- Modal -->
-  <div class="modal fade" id="modal-1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          ...
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
-        </div>
       </div>
     </div>
   </div>
@@ -209,32 +196,27 @@
     $('#submit').on('click', function (event) {
       event.preventDefault();
       // store user survey inputs
-      var userInput = {
+
+      var userAnswers = {
         name: $('#user-name').val().trim(),
         photo: $('#user-photo').val().trim(),
         scores: [
-          $("#question-one").val(),
-          $("#question-two").val(),
-          $("#question-three").val(),
-          $("question-four").val(),
-          $("question-five").val(),
-          $("question-six").val(),
-          $("question-seven").val(),
-          $("question-eight").val(),
-          $("question-nine").val(),
-          $("question-ten").val()
+          $("#question-1").val(),
+          $("#question-2").val(),
+          $("#question-3").val(),
+          $("#question-4").val(),
+          $("#question-5").val(),
+          $("#question-6").val(),
+          $("#question-7").val(),
+          $("#question-8").val(),
+          $("#question-9").val(),
+          $("#question-10").val()
         ]
       };
-      console.log('userInput = ' + JSON.stringify(userInput));
-      // add userInput to friendDataArr
-      $.post("/api/friends", userInput)
-        .done(function (data) {
+      console.log("userAnswers = " + JSON.stringify(userAnswers));
+      // add user to friendDataArr
+      $.post("/api/friends", userAnswers);
 
-          $("#match-name").html(data.matchName);
-          $("#match-image").attr("src", data.matchImage);
-          // Pop open the modal dialog
-          $('#modal-1').modal('open');
-        });
     });
   </script>
 

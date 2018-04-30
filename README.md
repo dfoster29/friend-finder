@@ -1,6 +1,20 @@
 # friend-finder
 it's a friend finder
 
+The app consists of a 10 question survey to determine your best friend match. 
+
+used for the app:
+  html
+  bootstrap 4
+  javascript
+  node
+  npm packages:
+    express
+    path
+    body-parser
+
+The home page explains the app and allows you to click on a button to bring you to the survey page.  Upon load of the survey page you are required to enter your name and a link to a photo of yourself.  After completion of the survey your results are compared with the results of previous users.  The responses are looped over.  The best friend match is based on the lowest total difference, of the per question response differences. The results are displayed with the use of a modal.
+
 ==============================================================================
 
 ### Instructions
