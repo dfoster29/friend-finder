@@ -28,12 +28,16 @@
       <div class="bg-secondary p-4 m-3">
         <form>
           <div class="form-group">
-            <label for="userName"><h3>Name</h3></label>
+            <label for="userName">
+              <h3>Name</h3>
+            </label>
             <input type="text" class="form-control form-control-lg" id="user-name" placeholder="enter name...">
             <small id="nameHelp" class="form-text">Please enter your name</small>
           </div>
           <div class="form-group">
-            <label for="userPhoto"><h3>Photo</h3></label>
+            <label for="userPhoto">
+              <h3>Photo</h3>
+            </label>
             <input type="text" class="form-control form-control-lg" id="user-photo" placeholder="enter photo link...">
             <small id="nameHelp" class="form-text">Please enter a link to a photo of yourself</small>
           </div>
@@ -179,7 +183,7 @@
         </div>
 
         <div class="row justify-content-center">
-          <button id="submit" type="button" class="btn btn-lg btn-primary">
+          <button id="submit" type="button" class="btn btn-lg btn-primary" data-toggle="modal" data-target="#friendModal">
             submit survey
           </button>
         </div>
@@ -188,9 +192,30 @@
     </div>
   </div>
 
+  <!-- Modal -->
+  <div class="modal fade" id="friendModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Your closest friend match!</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div id="modal-name"></div>
+          <div id="modal-image"></div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <!-- <script type="text/javascript" src="./app.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
   <script type="text/javascript">
     $('#submit').on('click', function (event) {
@@ -215,8 +240,12 @@
       };
       console.log("userAnswers = " + JSON.stringify(userAnswers));
       // add user to friendDataArr
-      $.post("/api/friends", userAnswers);
-
+      $.post("/api/friends", userAnswers)
+        .done(function (data) {
+          $('#friendModal').modal("show");
+          $("#modal-name").html(friendName);
+          $("#modal-image").html("<img src=" + friendImage + " height='100' width='100'");
+        })
     });
   </script>
 
